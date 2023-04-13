@@ -18,7 +18,7 @@ const MyProfile = () => {
   const fetchUser = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5500/auth/users/${userID}`
+        `https://makeupstore-back.onrender.com/auth/users/${userID}`
       );
 
       setUser(response.data);
@@ -35,7 +35,7 @@ const MyProfile = () => {
     e.preventDefault();
     if (user.username !== "" && user.password !== "" && user.email !== "") {
       const updateUser = axios.patch(
-        `http://localhost:5500/auth/users/${userID}`,
+        `https://makeupstore-back.onrender.com/auth/users/${userID}`,
         user,
         { "Content-Type": "application/json" }
       );
