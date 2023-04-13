@@ -14,7 +14,7 @@ const EditProduct = () => {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5500/products/find/" + id
+          "https://makeupstore-back.onrender.com/products/find/" + id
         );
         setProduct(res.data);
       } catch (err) {
@@ -31,7 +31,7 @@ const EditProduct = () => {
     e.preventDefault();
     {
       const updateProduct = axios.patch(
-        `http://localhost:5500/products/${id}`,
+        `https://makeupstore-back.onrender.com/products/${id}`,
         product,
         { "Content-Type": "application/json" }
       );
