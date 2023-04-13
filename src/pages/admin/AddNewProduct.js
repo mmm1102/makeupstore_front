@@ -49,7 +49,7 @@ const AddNewProduct = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5500/products/upload_product",
+        "https://makeupstore-back.onrender.com/products/upload_product",
         data
       );
       toast.success("Product added to database");
