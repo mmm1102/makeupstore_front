@@ -22,7 +22,7 @@ const Products = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const res = await axios.get("http://localhost:5500/products");
+      const res = await axios.get("https://makeupstore-back.onrender.com/products");
       setProducts(res.data);
       setReload(false);
     };
