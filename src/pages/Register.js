@@ -15,7 +15,7 @@ const Register = () => {
 
   const onFormSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:5500/auth/register", data);
+      const res = await axios.post("https://makeupstore-back.onrender.com/auth/register", data);
       toast.success("Registration succesfull!");
    
       console.log(res.data);
