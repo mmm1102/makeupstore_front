@@ -15,7 +15,7 @@ const Login = () => {
     const data = { username: username, password: password };
 
     try {
-      const res = await axios.post("http://localhost:5500/auth/login", data);
+      const res = await axios.post("https://makeupstore-back.onrender.com/auth/login", data);
       toast.success("Login succesfull!");
       setCookies("access_token", res.data.token);
       window.localStorage.setItem("userID", res.data.userID);
