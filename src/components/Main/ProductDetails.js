@@ -21,7 +21,7 @@ const ProductDetails = () => {
 
   const getProduct = async () => {
     try {
-      const res = await axios.get("http://localhost:5500/products/find/" + id);
+      const res = await axios.get("https://makeupstore-back.onrender.com/products/find/" + id);
       setProduct(res.data);
     } catch (err) {
       console.log(err);
