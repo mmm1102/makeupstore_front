@@ -11,7 +11,7 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const fetchUsers = async () => {
-      const res = await axios.get("http://localhost:5500/auth/all_users");
+      const res = await axios.get("https://makeupstore-back.onrender.com/auth/all_users");
       setUsers(res.data);
     };
     fetchUsers();
@@ -20,7 +20,7 @@ const AdminDashboard = () => {
   const RemoveUser = async (id) => {
     console.log(id);
     try {
-      const res = await axios.delete(`http://localhost:5500/auth/${id}`);
+      const res = await axios.delete(`https://makeupstore-back.onrender.com/auth/${id}`);
       console.log(res.data);
       toast.success("User removed!");
     } catch (err) {
